@@ -28,6 +28,11 @@ jobs:
         --add-data "*.wav;." \
         --add-data "*.png;." \
         snake.py
+
+    - name: Zip Windows build
+      run: |
+        cd dist
+        zip -r Snake_Windows_v3.zip snake.exe
     
     - name: Upload artifact
       uses: actions/upload-artifact@v3
