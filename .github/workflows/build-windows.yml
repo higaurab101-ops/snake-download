@@ -23,7 +23,7 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onefile --windowed --icon=biggerlogo.ico --add-data "*.wav;." --add-data "*.png;." snake.py
+        pyinstaller --onefile --windowed --icon=biggerlogo.ico --add-data "snake/*.png;." --add-data "snake/*.wav;." snake/snake.py
 
     - name: Zip Windows build
       run: |
