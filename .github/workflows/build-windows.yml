@@ -24,6 +24,7 @@ jobs:
     - name: Build EXE
       run: |
         pyinstaller --onefile --windowed \
+        --icon=biggerlogo.ico 
         --add-data "*.wav;." \
         --add-data "*.png;." \
         snake.py
