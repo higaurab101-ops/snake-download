@@ -23,8 +23,11 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onefile --windowed snake.py
-
+        pyinstaller --onefile --windowed \
+        --add-data "*.wav;." \
+        --add-data "*.png;." \
+        snake.py
+    
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
