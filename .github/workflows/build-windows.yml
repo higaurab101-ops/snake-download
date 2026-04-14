@@ -23,11 +23,11 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onefile --windowed --icon=biggerlogo.ico --add-data "snake/*.png;." --add-data "snake/*.wav;." snake/snake.py
+        pyinstaller --onefile --windowed --icon=snake/biggerlogo.ico --add-data "snake/*.png;." --add-data "snake/*.wav;." snake/snake.py
 
     - name: Zip Windows build
       run: |
-        powershell Compress-Archive -Path dist/snake.exe -DestinationPath dist/Snake_Windows_v3.zip
+        powershell Compress-Archive -Path dist/*.exe -DestinationPath dist/Snake_Windows_v3.zip
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
