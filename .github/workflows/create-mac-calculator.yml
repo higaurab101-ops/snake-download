@@ -23,7 +23,7 @@ jobs:
 
     - name: Build Mac App
       run: |
-        pyinstaller --onedir --windowed --icon=calculator/biggerlogo.icns --add-data "*.png:." --add-data "*.wav:." calculator/calculator.py
+        pyinstaller --onedir --windowed --icon=calculator/device.icns --add-data "*.png:." calculator/calculator.py
 
     - name: Zip Mac build
       run: |
