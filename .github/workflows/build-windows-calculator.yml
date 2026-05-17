@@ -24,7 +24,7 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onedir --windowed --icon=calculator/device.ico --add-data "*.png:." calculator/calculator.py
+        pyinstaller --onedir --windowed --icon=calculator/device.ico --add-data "*.png:." calculator/calculate.py
 
     - name: Zip Windows build
       run: |
